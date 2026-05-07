@@ -17,12 +17,17 @@ function App() {
     useEffect(() => {
     localStorage.setItem("movie-blog-data", JSON.stringify(blogs));
   }, [blogs]);
-    const addBlog = (newPost) => {
+const addBlog = (newPost) => {
     setBlogs([newPost, ...blogs]);
   };
 const deleteBlog = (id) => {
     setBlogs(blogs.filter((blog) => blog.blogID !== id));
   };
+const updateBlog = (updatedPost) => {
+  setBlogs(blogs.map(blog => 
+    blog.blogID === updatedPost.blogID ? updatedPost : blog
+  ));
+};
   return (
     <div>
       <NavBar />
@@ -32,9 +37,8 @@ const deleteBlog = (id) => {
           <Route path="/favorites" element={ <Favorites/>}/>
           <Route path="/blog" element={<BlogList blogs={blogs} />} />
           <Route path="/blog/new" element={<CreateBlog addBlog={addBlog} />} />
-          <Route 
-            path="/blog/:id" 
-            element={<Post blogs={blogs} deleteBlog={deleteBlog} />}
+          <Route path="/blog/:id" element={<Post blogs={blogs} deleteBlog={deleteBlog} />}
+          <Route path="/blog/edit/:id" element={<EditBlog blogs={blogs} updateBlog={updateBlog} />} />
         </Routes>
       </main>
     </div>
