@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Post = ({ blogs, deleteBlog }) => {
   const { id } = useParams();
@@ -20,7 +21,10 @@ const Post = ({ blogs, deleteBlog }) => {
       <div className="post-nav">
         <button onClick={() => navigate("/blog")}>← Back</button>
         <button className="delete-btn" onClick={handleDelete}>Delete</button>
-      </div>
+        <Link to={`/blog/edit/${blog.blogID}`} className="blog-edit-btn">
+    Edit Post
+      </Link>
+     </div>
       <h1>{blog.title}</h1>
       <p className="meta">By {blog.author} on {blog.date}</p>
       <img src={blog.imageUrl} alt={blog.title} className="post-banner" />
