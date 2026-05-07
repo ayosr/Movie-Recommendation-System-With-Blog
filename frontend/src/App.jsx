@@ -1,6 +1,6 @@
 
 import './css/App.css'
-import './css/BlogCard.css'
+import './css/Blogcard.css'
 import MovieCard from "./components/MovieCard"
 import Favorites from "./pages/Favorites"
 import Home from "./pages/Home"
