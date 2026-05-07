@@ -1,5 +1,6 @@
 
 import './css/App.css'
+import './css/BlogCard.css'
 import MovieCard from "./components/MovieCard"
 import Favorites from "./pages/Favorites"
 import Home from "./pages/Home"
@@ -8,6 +9,7 @@ import NavBar from "./components/NavBar"
 import BlogList from "./pages/BlogList";
 import Post from "./components/Post";
 import CreateBlog from "./pages/CreateBlog";
+import EditBlog from "./pages/EditBlog";
 import { initialBlogData } from "./data/blogData";
 
 function App() {
