@@ -39,7 +39,7 @@ const updateBlog = (updatedPost) => {
           <Route path="/favorites" element={ <Favorites/>}/>
           <Route path="/blog" element={<BlogList blogs={blogs} />} />
           <Route path="/blog/new" element={<CreateBlog addBlog={addBlog} />} />
-          <Route path="/blog/:id" element={<Post blogs={blogs} deleteBlog={deleteBlog} />}
+          <Route path="/blog/:id" element={<Post blogs={blogs} deleteBlog={deleteBlog} />} />
           <Route path="/blog/edit/:id" element={<EditBlog blogs={blogs} updateBlog={updateBlog} />} />
         </Routes>
       </main>
@@ -48,4 +48,4 @@ const updateBlog = (updatedPost) => {
 }
 
 
-export default App
+export default App;
