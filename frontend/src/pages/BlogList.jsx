@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
-import "../css/BlogCard.css"
+import "../css/Blogcard.css"
 
 const BlogList = ({ blogs }) => (
   <div className="blog-list-container">
